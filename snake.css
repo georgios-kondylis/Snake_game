@@ -1,0 +1,95 @@
+* {
+background-color: rgb(0, 4, 66);
+font-family: gamingFont;
+}
+
+@font-face{
+    font-family: gamingFont;
+    src: url(RetroGaming.ttf);
+}
+
+#gameContainer {
+    text-align: center;
+}
+
+#resetContainer {
+    display: flex;
+    justify-content: center; /* Center the reset button */
+    margin-bottom: 10px; /* Space below the reset button */
+}
+
+#gameBoard {
+    border: 3px solid;
+    width: 90vw; /* Make the canvas responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Optional: Limit max size */
+    max-height: 500px; /* Optional: Limit max size */
+}
+
+#scoreText {
+    font-size: 10vw; /* Make the score responsive */
+    margin-top: 10px; /* Space above the score */
+    color: white; /* Text fill color */
+    text-shadow: 0 0 10px black; /* Shadow effect around the text */
+    font-family: gamingFont;
+}
+
+#resetButton {
+    background-color: yellow;
+    box-shadow: 3px 3px 5px white;
+    font-size: 22px;
+    width: 120px;
+    letter-spacing: 3px;
+    height: 50px;
+    border: 4px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#resetButton:hover{
+    background-color: rgb(252, 99, 53);
+    text-shadow: 3px 3px 5px white;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.direction {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.left-right {
+    display: flex;
+    justify-content: center;
+}
+
+#right {
+    margin-left: 60px;
+    width: 80px;
+    background-color: white;
+    color: black;
+    font-weight: 1000;
+    border: 3px outset rgb(114, 114, 114);
+}
+#left, #up, #down{
+    width: 80px;
+    background-color: white;
+    color: black;
+    font-weight: 1000;
+    border: 3px outset rgb(114, 114, 114);
+}
+
+@media screen and (max-width: 600px) {
+    #controls {
+        display: initial;
+    }
+}
